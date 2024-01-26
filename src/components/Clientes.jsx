@@ -50,7 +50,7 @@ const Productos = () => {
 
         <div className="">
 
-          <div className={`bg-gray-300 rounded-2xl mt-5 mx-10 shadow-xl p-2 flex justify-center
+          <div className={`max-h-96 overflow-y-auto bg-gray-300 rounded-2xl mt-10 mx-10 shadow-xl p-2 flex justify-center
             ${isNavOpen ? 'translate-x-0' : 'translate-x-20'} duration-300
           `}>
             {clientesAMostrar?.length ? (

@@ -438,6 +438,8 @@ const facturarPedidoSalon = async () => {
             type: ACTUALIZAR_PENDIENTES,
             payload: pendientesActualizados
         })
+        // Actualizar registro Pedidos
+        cargarPedidos();
 
         cambiarTipoModal(null)
         setPedidoAPagar(null);
@@ -469,6 +471,8 @@ const facturarPedido = async datos => {
         sweetalertBasica(`Facturado correctamente para: ${nombre}`,  false);
         // Actualizar Clientes
         cargarClientes();
+        // Actualizar Pedidos
+        cargarPedidos();
     } catch (error) {
         console.error('Error al facturar el pedido:', error );
     }
@@ -597,7 +601,7 @@ const obtenerNombreUsuario = async usuarioID => {
 
 const buscarCliente = creadorID => {
     const cliente = state.clientes?.find( cliente => cliente._id === creadorID);
-    return cliente?.nombre
+    return cliente?.telefono
 }
 
 const eliminarPedido = async pedidoID => {

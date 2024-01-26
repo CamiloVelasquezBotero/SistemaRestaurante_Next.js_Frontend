@@ -52,11 +52,13 @@ const Pedido = ({pedido}) => {
                 </td>
                 {/* Cliente */}
                 <td className='p-2 shadow-md'>
-                    {pedido?.cliente && <p>{buscarCliente(pedido?.cliente)}</p>}
+                    {pedido?.cliente && <p>Tel: {buscarCliente(pedido?.cliente)}</p>}
 
                     {pedido?.notasAdicionales && <p>{pedido?.notasAdicionales}</p>}
 
                     {pedido?.tipoDePedido === 'salon' ? <p>salon</p> : null}
+
+                    {pedido?.tipoDePedido === 'llevar' ? <p>{pedido?.nombre}</p> : null}
                 </td>
                 {/* Creador */}
                 <td className='p-2 shadow-md'>

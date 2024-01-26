@@ -201,15 +201,21 @@ const IngresoDePedidos = () => {
               </div>
 
               <div className='mt-5 flex justify-center flex-col items-center'>
-                {productosFiltradosPedido?.map( (producto) => (
-                  <button
-                    key={producto?._id}
-                    className={`rounded-md bg-sky-700 hover:bg-sky-800 text-white  p-2 block mb-2 hover:scale-105 duration-300 font-semibold text-xl`}
-                    onClick={() => agregarPedido(producto)}
-                  >
-                    {producto.nombre}
-                  </button>
-                ))}
+                {productosFiltradosPedido?.length ? (
+                  <>
+                    {productosFiltradosPedido?.map( (producto) => (
+                      <button
+                        key={producto?._id}
+                        className={`rounded-md bg-sky-700 hover:bg-sky-800 text-white  p-2 block mb-2 hover:scale-105 duration-300 font-semibold text-xl`}
+                        onClick={() => agregarPedido(producto)}
+                      >
+                        {producto.nombre}
+                      </button>
+                    ))}
+                  </>
+                ) : (
+                  <p className='font-black text-xl text-center'>Aun no hay productos agregados a esta categoria</p>
+                )}
               </div>
             </>
           ) : (
