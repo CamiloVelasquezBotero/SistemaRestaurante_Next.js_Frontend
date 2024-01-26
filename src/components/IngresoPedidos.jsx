@@ -19,9 +19,9 @@ const IngresoDePedidos = () => {
      pendientesPorPagar, cambiarTipoModal, setPedidoAPagar, mesasDisponibles, facturarPedido
      } = AppContext;
 
-  const colores = ['sky', 'red', 'green', 'yellow', 'gray',
-   'orange', 'purple', 'amber', 'lime', 'slate', 'teal',
-   'esmerald', 'cyan'];
+  const colores = ['bg-sky-500', 'bg-red-500', 'bg-green-500', 'bg-yellow-500', 'bg-gray-500',
+   'bg-orange-500', 'bg-purple-500', 'bg-amber-500', 'bg-lime-500', 'bg-slate-500', 'bg-teal-500',
+   'bg-esmerald-500', 'bg-cyan-500'];
 
   useEffect(() => {
     if(tipoDePedido === 'llevar' || tipoDePedido === 'salon') {
@@ -217,7 +217,7 @@ const IngresoDePedidos = () => {
               {categorias?.map( (categoria, index) => (
                 <button
                   key={categoria?._id}
-                  className={`rounded-md bg-${colores[index]}-500 p-2 block mb-2 hover:scale-105 duration-300 font-semibold text-xl`}
+                  className={`rounded-md ${colores[index]} p-2 block mb-2 hover:scale-105 duration-300 font-semibold text-xl`}
                   onClick={() => {
                     setcategoriaFiltrarPedido(categoria.nombre)
                   }}

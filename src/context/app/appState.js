@@ -38,7 +38,7 @@ const AppState = ({children}) => {
     const { token } = AuthContext;
 
     const initialState = {
-        seccion: 'registroPedidos',
+        seccion: 'ingresoPedidos',
         categoria: null,
         isNavOpen: true,
         productos: null,
