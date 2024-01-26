@@ -60,8 +60,8 @@ const AgregarProducto = () => {
             onChange={formik.handleChange}
           >
             <option value="">Seleccione</option>
-            {categorias.map( categoria => 
-                <option value={categoria.nombre}>{categoria.nombre}</option>
+            {categorias.map( (categoria, index) => 
+                <option key={index} value={categoria.nombre}>{categoria.nombre}</option>
               )}
           </select>
           {formik.touched.categoria && formik.errors.categoria ? (

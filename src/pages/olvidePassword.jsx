@@ -7,7 +7,7 @@ import authContext from '@/context/auth/authContext';
 import Alerta from '@/components/Alerta';
 import Layout from "@/components/Layout"
 
-const login = () => {
+const OlvidePassword = () => {
   const AuthContext = useContext(authContext)
   const { autenticado, mensaje, limpiarAlerta, olvidePassword} = AuthContext;
   const router = useRouter();
@@ -91,4 +91,4 @@ const login = () => {
   )
 }
 
-export default login
+export default OlvidePassword
